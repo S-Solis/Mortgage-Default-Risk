@@ -3,8 +3,11 @@ This Jupyter Notebook project contains a comparison of multiple machine learning
 
 ## Index
 [Project Brief](#Project-Brief)
+
 [Environment Set Up](#Environment-Set-Up)
+
 [Project Outline](#Project-Outline)
+
 [Project Findings](#Project-Findings)
 
 ## Project Brief
@@ -34,7 +37,18 @@ Jupyter Notebook:
 - Part 6: Export the list of customers identified to be at risk of defaulting on their mortgages.
 
 ## Project Findings
+Below are the accuracy scores and area under the curve (AUC) of each tree/forest iteration during my final runs for each of them. (Note that these may vary slightly per run, based on the randomness of some of the train/test splits and the Random Forest.)
 
+| | **Top 10 Single Tree** | **Random Forest** | **New Top 10 Single Tree** | **New Random Forest** 
+:-|:-:|-:|-:|-:
+**Accuracy**|91.81%|91.78%|91.87%|91.87%
+**TN / FP**|40014 / 67|40002 / 0|39810 / 158|39962 / 6
+**FN / TP**|3479 / 16|3573 / 1|3543 / 65|3599 / 9
+**AUC**|.71|.75|.72|.74
+
+All trees ran with about 92% accuracy, with little variation between all of them. The accuracy did go up slightly from my guessed top 10 and the actual top 10 features (as identified by the random forest). I would expect this, since the random forest can more programmatically determine the top ten variables. The AUC for each model is also quite close, with all falling between .7 and .75. However, when breaking these results down into true negatives, false positions, false negatives, and true positives (TN, FP, FN, and TP respectively), it's clear that most of the models struggled to positively identify any customers at risk of default.
+
+I would still be wary of using this algorithm to flag possible default risk/lending decisions. As seen in the variables selected, there is a chance that the algorithms are all perpetuating age or gender bias that's present in the data. Given the four confusion matrices, I would recommend utilizing the true top 10 single tree. However, I want to stress that this data should not be used to make lending decisions without a human underwriter confirming the findings. 
 
 
 *Note that due to the randomness of the train/test data splits and the random forest, many of the models' results can vary per run of the notebook. This variability can impact the models' calculated accuracies, areas under the curve (AUC's), type I/II error counts, and even the final top ten features selected by the random forest.
