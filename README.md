@@ -4,7 +4,7 @@ This project contains a comparison of multiple machine learning models to predic
 ## Index
 [Project Brief](#Project-Brief)
 
-[Tech Tools & Credits](#Tech-Tools-&-Credits)
+[Tech Tools & Credits](#Tech-Tools-and-Credits)
 
 [Setting Up the Environment](#Setting-Up-the-Environment)
 
@@ -21,7 +21,7 @@ Based on data from 7 tables, I build 4 classification models to quantify the ris
 3. A re-engineered classification tree based on the true top 10 predictive features.
 4. A random forest classifier with only the top 10 predictive features (for efficiency gains).
 
-## Tech Tools & Credits
+## Tech Tools and Credits
 This project leverages:
 - a [dataset available on Kaggle](https://www.kaggle.com/competitions/home-credit-default-risk) provided by Home Credit
 - scikit learn's [DecisionTreeClassifier](https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html)
