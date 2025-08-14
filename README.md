@@ -1,10 +1,12 @@
 # Mortgage-Default-Risk
-This Jupyter Notebook project contains a comparison of multiple machine learning models to predict whether a customer is likely to default on their mortgage with little to no credit history.
+This project contains a comparison of multiple machine learning models to predict whether a customer is likely to default on their mortgage with little to no credit history. The project leverages Python, Jupyter Notebooks, and SQL.
 
 ## Index
 [Project Brief](#Project-Brief)
 
-[Environment Set Up](#Environment-Set-Up)
+[Tech Tools & Credits](#Tech-Tools-&-Credits)
+
+[Setting Up the Environment](#Setting-Up-the-Environment)
 
 [Project Outline](#Project-Outline)
 
@@ -19,9 +21,17 @@ Based on data from 7 tables, I build 4 classification models to quantify the ris
 3. A re-engineered classification tree based on the true top 10 predictive features.
 4. A random forest classifier with only the top 10 predictive features (for efficiency gains).
 
-This project utilizes a [dataset available on Kaggle](https://www.kaggle.com/competitions/home-credit-default-risk) provided by Home Credit.
+## Tech Tools & Credits
+This project leverages:
+- a [dataset available on Kaggle](https://www.kaggle.com/competitions/home-credit-default-risk) provided by Home Credit
+- scikit learn's [DecisionTreeClassifier](https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html)
+- scikit learn's [RandomForestClassifier])https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html)
+- scikit learn's [roc_auc_score](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.roc_auc_score.html)
+- scikit learn/s [confusion_matrix](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.confusion_matrix.html)
+- seaborn's [heatmap](https://seaborn.pydata.org/generated/seaborn.heatmap.html)
+- matplotlib's [pyplot](https://matplotlib.org/3.5.3/api/_as_gen/matplotlib.pyplot.html)
 
-## Environment Set Up
+## Setting Up the Environment
 Jupyter Notebook:
 1. Install Jupyter Notebook via Anaconda. Instructions are available [here](https://docs.jupyter.org/en/latest/install/notebook-classic.html).
 2. Download the [dataset available on Kaggle](https://www.kaggle.com/competitions/home-credit-default-risk).
