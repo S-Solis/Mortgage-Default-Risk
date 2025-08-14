@@ -3,8 +3,11 @@ This Jupyter Notebook project contains a comparison of multiple machine learning
 
 ## Index
 [Project Brief](#Project-Brief)
+
 [Environment Set Up](#Environment-Set-Up)
+
 [Project Outline](#Project-Outline)
+
 [Project Findings](#Project-Findings)
 
 ## Project Brief
