@@ -2,7 +2,7 @@
 This Jupyter Notebook project contains a comparison of multiple machine learning models to predict whether a customer is likely to default on their mortgage with little to no credit history.
 
 ## Index
-[Project Brief][#Project Brief]
+[Project Brief](#Project Brief)
 
 ## Project Brief
 Home Credit's "responsible lending model empowers customers with little or no credit history to access financing, enabling customers to borrow easily and safely, both online and offline" [[1]](https://www.homecredit.net/about-us.aspx/#who-we-are). With limited credit history, how can Home Credit leverage machine learning to find hidden trends in the data they do have and estimate mortgage default risk for a prospective borrower?
