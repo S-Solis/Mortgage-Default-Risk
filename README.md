@@ -11,3 +11,8 @@ Based on data from 7 tables, I build 4 classification models to quantify the ris
 4. A random forest classifier with only the top 10 predictive features, which performs more efficiently than the random forest built on all features.
 
 This project utilizes a [dataset available on Kaggle](https://www.kaggle.com/competitions/home-credit-default-risk) provided by Home Credit.
+
+## Project Set Up (MacOS)
+1. Install Jupyter Notebook via Anaconda. Instructions are available [here](https://docs.jupyter.org/en/latest/install/notebook-classic.html).
+2. Download the [dataset available on Kaggle](https://www.kaggle.com/competitions/home-credit-default-risk).
+3. Unzip the data files and rename "application_train.csv" to "default_risk.csv". Note that I performed this step to standardize the table naming conventions across the csv files. Rename the unzipped repository to "data" to maintain the links within the Jupyter Notebook.
