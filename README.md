@@ -30,7 +30,7 @@ Jupyter Notebook:
 - Part 2: Build a random forest (RF) to determine the actual top ten features.*
 - Part 3: Re-build a basic classification tree using the actual top ten features, as identified by the RF.
 - Part 4: Re-build a new random forest using only the actual top ten features (enhancing run-time/model efficiency vs. 150+ features).
-- Part 5: Compare the models' accuracy, confusion matrices, and AUC's. Select the model to use for productionalization.
+- Part 5: Compare the models' accuracy, confusion matrices, and AUC's.* Select the model to use for productionalization.
 - Part 6: Export the list of customers identified to be at risk of defaulting on their mortgages.
 
 ## Project Findings
