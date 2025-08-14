@@ -4,7 +4,7 @@ This project contains a comparison of multiple machine learning models to predic
 ## Index
 [Project Brief](#Project-Brief)
 
-[Tech Tools & Credits](#Tech-Tools-&-Credits)
+[Tech Tools & Credits](#Tech-Tools--Credits)
 
 [Setting Up the Environment](#Setting-Up-the-Environment)
 
