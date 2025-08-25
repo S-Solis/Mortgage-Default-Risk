@@ -15,7 +15,7 @@ This project contains a comparison of multiple machine learning models to predic
 ## Project Brief
 Home Credit's "responsible lending model empowers customers with little or no credit history to access financing, enabling customers to borrow easily and safely, both online and offline" [[1]](https://www.homecredit.net/about-us.aspx/#who-we-are). With limited credit history, how can Home Credit leverage machine learning to find hidden trends in the data they do have and estimate mortgage default risk for a prospective borrower?
 
-Based on data from 7 tables, I build 4 classification models to quantify the risk that a prospective borrower will default on their mortgage. I conclude by comparing the accuracy of the 4 models. The models are as follows:
+Based on data from 7 tables for over 300,000 customers, I build 4 classification models to quantify the risk that a prospective borrower will default on their mortgage. I conclude by comparing the accuracy of the 4 models. The models are as follows:
 1. A classification tree based on my hypothesis of the top 10 predictive features.
 2. A random forest classifier to find the true top 10 predictive features.
 3. A re-engineered classification tree based on the true top 10 predictive features.
