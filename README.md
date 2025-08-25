@@ -37,6 +37,16 @@ Jupyter Notebook:
 2. Download the [dataset available on Kaggle](https://www.kaggle.com/competitions/home-credit-default-risk).
 3. Unzip the data files and rename "application_train.csv" to "default_risk.csv". Note that I performed this step to standardize the table naming conventions across the csv files. Rename the unzipped repository to "data" to maintain the links within the Jupyter Notebook.
 
+MySQL Workbench:
+1. Install MySQL workbench. Here is a [YouTube video](https://www.youtube.com/watch?v=7S_tz1z_5bA&t=300s) with installation instructions.
+2. Build a new connection and double click to enter it.
+3. Under Administration > User and Privileges, Administrative Roles, ensure your appropriate roles have DBA access. This ensure no restrictions and that data can be loaded. (Note that this is **not** recommended for a production environment.)
+4. Setting the configuration file:
+   1. At the home page, right click the connection and select "Edit Connection".
+   2. Set the "Configuration File" setting to the location of the my.cnf file included. Note that this file includes settings that are **not** recommended for a production environment for security reasons.
+5. Run each of the CREATE sql files to create the tables.
+6. Run each of the LOAD sql files to load data into the tables.
+
 ## Project Outline
 - Part 0: Exploratory Data Analysis: In this section, data is loaded into data frames and explored. I hypothesize the top ten data features on which to built a basic decision tree. I splice the data on the primary key for the customer, merging multiple tables to build the final dataframe used for training.
 - Part 1: Build a basic classification tree using the top ten hypothesized data features.
