@@ -256,19 +256,19 @@ SK_ID_PREV int NOT NULL
 SET GLOBAL local_infile=true;
 
 -- load prospects data 
-LOAD DATA LOCAL INFILE '/Users/Stephanie/Dropbox/Courses/MSAAI/1._Data_Science_Portfolio_Project/Mortgage_Default_Risk/data/default_risk.csv' 
+LOAD DATA LOCAL INFILE 'data/default_risk.csv' 
 INTO TABLE sql_FI.prospects
 FIELDS TERMINATED BY ','
 IGNORE 1 LINES;
 
 -- load bureau data
-LOAD DATA LOCAL INFILE '/Users/Stephanie/Dropbox/Courses/MSAAI/1._Data_Science_Portfolio_Project/Mortgage_Default_Risk/data/bureau.csv' 
+LOAD DATA LOCAL INFILE 'data/bureau.csv' 
 INTO TABLE sql_FI.bureau
 FIELDS TERMINATED BY ','
 IGNORE 1 LINES;
 
 -- load prev_app data
-LOAD DATA LOCAL INFILE '/Users/Stephanie/Dropbox/Courses/MSAAI/1._Data_Science_Portfolio_Project/Mortgage_Default_Risk/data/previous_application.csv' 
+LOAD DATA LOCAL INFILE 'data/previous_application.csv' 
 INTO TABLE sql_FI.prev_app
 FIELDS TERMINATED BY ','
 IGNORE 1 LINES;
@@ -277,25 +277,25 @@ IGNORE 1 LINES;
 SET GLOBAL innodb_buffer_pool_size = 2147483648;
 
 -- load bureau_balance data
-LOAD DATA LOCAL INFILE '/Users/Stephanie/Dropbox/Courses/MSAAI/1._Data_Science_Portfolio_Project/Mortgage_Default_Risk/data/bureau_balance.csv' 
+LOAD DATA LOCAL INFILE 'data/bureau_balance.csv' 
 INTO TABLE sql_FI.bureau_balance
 FIELDS TERMINATED BY ','
 IGNORE 1 LINES;
 
 -- load cc balance data
-LOAD DATA LOCAL INFILE '/Users/Stephanie/Dropbox/Courses/MSAAI/1._Data_Science_Portfolio_Project/Mortgage_Default_Risk/data/credit_card_balance.csv' 
+LOAD DATA LOCAL INFILE 'data/credit_card_balance.csv' 
 INTO TABLE sql_FI.cc_balance
 FIELDS TERMINATED BY ','
 IGNORE 1 LINES;
 
 -- load installments payments data
-LOAD DATA LOCAL INFILE '/Users/Stephanie/Dropbox/Courses/MSAAI/1._Data_Science_Portfolio_Project/Mortgage_Default_Risk/data/installments_payments.csv' 
+LOAD DATA LOCAL INFILE 'data/installments_payments.csv' 
 INTO TABLE sql_FI.payments
 FIELDS TERMINATED BY ','
 IGNORE 1 LINES;
 
 -- load POS CASH balance data
-LOAD DATA LOCAL INFILE '/Users/Stephanie/Dropbox/Courses/MSAAI/1._Data_Science_Portfolio_Project/Mortgage_Default_Risk/data/POS_CASH_balance.csv' 
+LOAD DATA LOCAL INFILE 'data/POS_CASH_balance.csv' 
 INTO TABLE sql_FI.pos_cash_bal
 FIELDS TERMINATED BY ','
 IGNORE 1 LINES;
