@@ -21,6 +21,8 @@ Based on data from 7 tables for over 300,000 customers, I build 4 classification
 3. A re-engineered classification tree based on the true top 10 predictive features.
 4. A random forest classifier with only the top 10 predictive features (for efficiency gains).
 
+I create tables and load the data using SQL for additional exploratory data analysis.
+
 ## Tech Tools & Credits
 This project leverages:
 - a [dataset available on Kaggle](https://www.kaggle.com/competitions/home-credit-default-risk) provided by Home Credit
