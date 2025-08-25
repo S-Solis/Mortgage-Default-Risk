@@ -40,9 +40,9 @@ Jupyter Notebook:
 MySQL Workbench:
 1. Install MySQL workbench. Here is a [YouTube video](https://www.youtube.com/watch?v=7S_tz1z_5bA&t=300s) with installation instructions.
 2. Build a new connection and double click to enter it.
-3. Under Administration > User and Privileges, Administrative Roles, ensure your appropriate roles have DBA access. This ensure no restrictions and that data can be loaded. (Note that this is **not** recommended for a production environment.)
+3. Under Administration > User and Privileges > Administrative Roles, ensure your appropriate roles have DBA-level (unrestricted) access. This ensures no user restrictions and that data can be loaded. (Note that this is **not** recommended for a production environment.)
 4. Setting the configuration file:
-   1. At the home page, right click the connection and select "Edit Connection".
+   1. Navigate to the workbench home page, right click the connection, and select "Edit Connection".
    2. Set the "Configuration File" setting to the location of the my.cnf file included. Note that this file includes settings that are **not** recommended for a production environment for security reasons.
 5. Run each of the CREATE sql files to create the tables.
 6. Run each of the LOAD sql files to load data into the tables.
