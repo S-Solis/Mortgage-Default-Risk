@@ -44,7 +44,7 @@ MySQL Workbench:
 4. Setting the configuration file:
    1. Navigate to the workbench home page, right click the connection, and select "Edit Connection".
    2. Set the "Configuration File" setting to the location of the my.cnf file included. Note that this file includes settings that are **not** recommended for a production environment for security reasons.
-5. Open and run the file CREATE_TABLES_LOAD_DATA.sql.
+5. Open and run the file CREATE_TABLES_LOAD_DATA.sql. (Note: Update the filepaths as needed depending on where the .csv files are saved locally.)
 6. Run queries to explore the data as needed.
 
 ## Project Outline
