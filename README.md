@@ -44,8 +44,8 @@ MySQL Workbench:
 4. Setting the configuration file:
    1. Navigate to the workbench home page, right click the connection, and select "Edit Connection".
    2. Set the "Configuration File" setting to the location of the my.cnf file included. Note that this file includes settings that are **not** recommended for a production environment for security reasons.
-5. Run each of the CREATE sql files to create the tables.
-6. Run each of the LOAD sql files to load data into the tables.
+5. Open and run the file CREATE_TABLES_LOAD_DATA.sql.
+6. Run queries to explore the data as needed.
 
 ## Project Outline
 - Part 0: Exploratory Data Analysis: In this section, data is loaded into data frames and explored. I hypothesize the top ten data features on which to built a basic decision tree. I splice the data on the primary key for the customer, merging multiple tables to build the final dataframe used for training.
