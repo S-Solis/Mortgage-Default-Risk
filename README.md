@@ -25,13 +25,13 @@ I create tables and load the data using SQL for additional exploratory data anal
 
 ## Tech Tools & Credits
 This project leverages:
-- a [dataset available on Kaggle](https://www.kaggle.com/competitions/home-credit-default-risk) provided by Home Credit
-- scikit learn's [DecisionTreeClassifier](https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html)
-- scikit learn's [RandomForestClassifier])https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html)
-- scikit learn's [roc_auc_score](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.roc_auc_score.html)
-- scikit learn/s [confusion_matrix](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.confusion_matrix.html)
-- seaborn's [heatmap](https://seaborn.pydata.org/generated/seaborn.heatmap.html)
-- matplotlib's [pyplot](https://matplotlib.org/3.5.3/api/_as_gen/matplotlib.pyplot.html)
+1. a [dataset available on Kaggle](https://www.kaggle.com/competitions/home-credit-default-risk) provided by [Home Credit](https://www.homecredit.net/about-us.aspx/#who-we-are)
+2. Scikit learn's [DecisionTreeClassifier](https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html)
+3. Scikit learn's [RandomForestClassifier])https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html)
+4. Scikit learn's [roc_auc_score](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.roc_auc_score.html)
+5. Scikit learn's [confusion_matrix](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.confusion_matrix.html)
+6. Seaborn's [heatmap](https://seaborn.pydata.org/generated/seaborn.heatmap.html)
+7. Matplotlib's [pyplot](https://matplotlib.org/3.5.3/api/_as_gen/matplotlib.pyplot.html)
 
 ## Setting Up the Environment
 Jupyter Notebook:
@@ -45,7 +45,7 @@ MySQL Workbench:
 3. Under Administration > User and Privileges > Administrative Roles, ensure your appropriate roles have DBA-level (unrestricted) access. This ensures no user restrictions and that data can be loaded. (Note that this is **not** recommended for a production environment.)
 4. Setting the configuration file:
    1. Navigate to the workbench home page, right click the connection, and select "Edit Connection".
-   2. Set the "Configuration File" setting to the location of the my.cnf file included. Note that this file includes settings that are **not** recommended for a production environment for security reasons.
+   2. Set the "Configuration File" setting to the location of the my.cnf file included. Note that this file includes a setting that is **not** recommended for a production environment for security reasons.
 5. Open and run the file CREATE_TABLES_LOAD_DATA.sql. (Note: Update the filepaths as needed depending on where the .csv files are saved locally.)
 6. Run queries to explore the data as needed.
 
