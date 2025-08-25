@@ -1,0 +1,301 @@
+-- create prospects table
+CREATE TABLE sql_FI.prospects (
+	SK_ID_CURR int NOT NULL PRIMARY KEY
+	, TARGET text
+	, NAME_CONTRACT_TYPE text
+	, CODE_GENDER text
+	, FLAG_OWN_CAR text
+	, FLAG_OWN_REALTY text
+	, CNT_CHILDREN int
+	, AMT_INCOME_TOTAL double
+	, AMT_CREDIT double
+	, AMT_ANNUITY double
+	, AMT_GOODS_PRICE double
+	, NAME_TYPE_SUITE varchar(255)
+	, NAME_INCOME_TYPE varchar(255)
+	, NAME_EDUCATION_TYPE varchar(255)
+	, NAME_FAMILY_STATUS varchar(255)
+	, NAME_HOUSING_TYPE varchar(255)
+	, REGION_POPULATION_RELATIVE double
+	, DAYS_BIRTH int
+	, DAYS_EMPLOYED int
+	, DAYS_REGISTRATION int
+	, DAYS_ID_PUBLISH double
+	, OWN_CAR_AGE double
+	, FLAG_MOBIL text
+	, FLAG_EMP_PHONE text
+	, FLAG_WORK_PHONE text
+	, FLAG_CONT_MOBILE text
+	, FLAG_PHONE text
+	, FLAG_EMAIL text
+	, OCCUPATION_TYPE text
+	, CNT_FAM_MEMBERS int
+	, REGION_RATING_CLIENT int
+	, REGION_RATING_CLIENT_W_CITY int
+	, WEEKDAY_APPR_PROCESS_START varchar(255)
+	, HOUR_APPR_PROCESS_START int
+	, REG_REGION_NOT_LIVE_REGION int
+	, REG_REGION_NOT_WORK_REGION int
+	, LIVE_REGION_NOT_WORK_REGION int
+	, REG_CITY_NOT_LIVE_CITY int
+	, REG_CITY_NOT_WORK_CITY int
+	, LIVE_CITY_NOT_WORK_CITY int
+	, ORGANIZATION_TYPE varchar(255)
+	, EXT_SOURCE_1 double
+	, EXT_SOURCE_2 double
+	, EXT_SOURCE_3 double
+	, APARTMENTS_AVG double
+	, BASEMENTAREA_AVG double 
+	, YEARS_BEGINEXPLUATATION_AVG double
+	, YEARS_BUILD_AVG double
+	, COMMONAREA_AVG double
+	, ELEVATORS_AVG double
+	, ENTRANCES_AVG double
+	, FLOORSMAX_AVG double
+	, FLOORSMIN_AVG double
+	, LANDAREA_AVG double
+	, LIVINGAPARTMENTS_AVG double
+	, LIVINGAREA_AVG double
+	, NONLIVINGAPARTMENTS_AVG double
+	, NONLIVINGAREA_AVG double
+	, APARTMENTS_MODE double
+	, BASEMENTAREA_MODE double
+	, YEARS_BEGINEXPLUATATION_MODE double
+	, YEARS_BUILD_MODE double
+	, COMMONAREA_MODE double
+	, ELEVATORS_MODE double
+	, ENTRANCES_MODE double
+	, FLOORSMAX_MODE double
+	, FLOORSMIN_MODE double
+	, LANDAREA_MODE double
+	, LIVINGAPARTMENTS_MODE double
+	, LIVINGAREA_MODE double
+	, NONLIVINGAPARTMENTS_MODE double
+	, NONLIVINGAREA_MODE double
+	, APARTMENTS_MEDI double
+	, BASEMENTAREA_MEDI double
+	, YEARS_BEGINEXPLUATATION_MEDI double
+	, YEARS_BUILD_MEDI double
+	, COMMONAREA_MEDI double
+	, ELEVATORS_MEDI double
+	, ENTRANCES_MEDI double
+	, FLOORSMAX_MEDI double
+	, FLOORSMIN_MEDI double
+	, LANDAREA_MEDI double
+	, LIVINGAPARTMENTS_MEDI double
+	, LIVINGAREA_MEDI double
+	, NONLIVINGAPARTMENTS_MEDI double
+	, NONLIVINGAREA_MEDI double
+	, FONDKAPREMONT_MODE varchar(255)
+	, HOUSETYPE_MODE varchar(255)
+	, TOTALAREA_MODE double
+	, WALLSMATERIAL_MODE varchar(255)
+	, EMERGENCYSTATE_MODE varchar(255)
+	, OBS_30_CNT_SOCIAL_CIRCLE double
+	, DEF_30_CNT_SOCIAL_CIRCLEOBS_60_CNT_SOCIAL_CIRCLE double
+	, DEF_60_CNT_SOCIAL_CIRCLE double
+	, DAYS_LAST_PHONE_CHANGE double
+	, FLAG_DOCUMENT_2 text
+	, FLAG_DOCUMENT_3 text
+	, FLAG_DOCUMENT_4 text
+	, FLAG_DOCUMENT_5 text
+	, FLAG_DOCUMENT_6 text
+	, FLAG_DOCUMENT_7 text
+	, FLAG_DOCUMENT_8 text
+	, FLAG_DOCUMENT_9 text
+	, FLAG_DOCUMENT_10 text
+	, FLAG_DOCUMENT_11 text
+	, FLAG_DOCUMENT_12 text
+	, FLAG_DOCUMENT_13 text
+	, FLAG_DOCUMENT_14 text
+	, FLAG_DOCUMENT_15 text
+	, FLAG_DOCUMENT_16 text
+	, FLAG_DOCUMENT_17 text
+	, FLAG_DOCUMENT_18 text
+	, FLAG_DOCUMENT_19 text
+	, FLAG_DOCUMENT_20 text
+	, FLAG_DOCUMENT_21 text
+	, AMT_REQ_CREDIT_BUREAU_HOUR double
+	, AMT_REQ_CREDIT_BUREAU_DAY double
+	, AMT_REQ_CREDIT_BUREAU_WEEK double
+	, AMT_REQ_CREDIT_BUREAU_MON double
+	, AMT_REQ_CREDIT_BUREAU_QRT double
+	, AMT_REQ_CREDIT_BUREAU_YEAR double
+);
+
+-- create bureau table
+CREATE TABLE sql_FI.bureau (
+SK_ID_CURR int NOT NULL
+, SK_ID_BUREAU int NOT NULL PRIMARY KEY
+, CREDIT_ACTIVE text
+, CREDIT_CURRENCY varchar(255)
+, DAYS_CREDIT int
+, CREDIT_DAY_OVERDUE int
+, DAYS_CREDIT_ENDDATE double
+, DAYS_ENDDATE_FACT double
+, AMT_CREDIT_MAX_OVERDUE double
+, CNT_CREDIT_PROLONG int
+, AMT_CREDIT_SUM double
+, AMT_CREDIT_SUM_DEBT double
+, AMT_CREDIT_SUM_LIMIT double
+, AMT_CREDIT_SUM_OVERDUE double
+, CREDIT_TYPE text
+, DAYS_CREDIT_UPDATE int
+, AMT_ANNUITY double
+, FOREIGN KEY (SK_ID_CURR) REFERENCES prospects(SK_ID_CURR)
+);
+
+-- create previous app table
+CREATE TABLE sql_FI.prev_app (
+SK_ID_PREV int NOT NULL PRIMARY KEY
+, SK_ID_CURR int
+, NAME_CONTRACT_TYPE text
+, AMT_ANNUITY double
+, AMT_APPLICATION double
+, AMT_CREDIT double
+, AMT_DOWN_PAYMENT double
+, AMT_GOODS_PRICE double
+, WEEKDAY_APPR_PROCESS_START text
+, HOUR_APPR_PROCESS_START int
+, FLAG_LAST_APPL_PER_CONTRACT text
+, NFLAG_LAST_APPL_IN_DAY text
+, RATE_DOWN_PAYMENT double
+, RATE_INTEREST_PRIMARY double
+, RATE_INTEREST_PRIVILEGED double
+, NAME_CASH_LOAN_PURPOSE text
+, NAME_CONTRACT_STATUS text
+, DAYS_DECISION int
+, NAME_PAYMENT_TYPE text
+, CODE_REJECT_REASON text
+, NAME_TYPE_SUITE text
+, NAME_CLIENT_TYPE text
+, NAME_GOODS_CATEGORY text
+, NAME_PORTFOLIO text
+, NAME_PRODUCT_TYPE text
+, CHANNEL_TYPE text
+, SELLERPLACE_AREA int
+, NAME_SELLER_INDUSTRY text
+, CNT_PAYMENT double
+, NAME_YIELD_GROUP varchar(255)
+, PRODUCT_COMBINATION varchar(255)
+, DAYS_FIRST_DRAWING double
+, DAYS_FIRST_DUE double
+, DAYS_LAST_DUE_1ST_VERSION double
+, DAYS_LAST_DUE double
+, DAYS_TERMINATION double
+, NFLAG_INSURED_ON_APPROVAL double
+, FOREIGN KEY (SK_ID_CURR) REFERENCES prospects(SK_ID_CURR)
+);
+
+-- create bureau balance table
+CREATE TABLE sql_FI.bureau_balance(
+ SK_ID_BUREAU int NOT NULL
+ , MONTHS_BALANCE int
+ , B_STATUS text
+ , FOREIGN KEY (SK_ID_BUREAU) REFERENCES bureau(SK_ID_BUREAU)
+);
+
+-- create credit card balance table
+CREATE TABLE sql_FI.cc_balance (
+SK_ID_PREV int NOT NULL
+, SK_ID_CURR int NOT NULL
+, MONTHS_BALANCE int
+, AMT_BALANCE double 
+, AMT_CREDIT_LIMIT_ACTUAL double
+, AMT_DRAWINGS_ATM_CURRENT double
+, AMT_DRAWINGS_CURRENT double
+, AMT_DRAWINGS_OTHER_CURRENT double
+, AMT_DRAWINGS_POS_CURRENT double
+, AMT_INST_MIN_REGULARITY double
+, AMT_PAYMENT_CURRENT double
+, AMT_PAYMENT_TOTAL_CURRENT double
+, AMT_RECEIVABLE_PRINCIPAL double
+, AMT_RECIVABLE double
+, AMT_TOTAL_RECEIVABLE double  
+, CNT_DRAWINGS_ATM_CURRENT double
+, CNT_DRAWINGS_CURRENT double
+, CNT_DRAWINGS_OTHER_CURRENT double
+, CNT_DRAWINGS_POS_CURRENT double
+, CNT_INSTALMENT_MATURE_CUM double
+, NAME_CONTRACT_STATUS text
+, SK_DPD int
+, SK_DPD_DEF int
+, FOREIGN KEY (SK_ID_PREV) REFERENCES prev_app(SK_ID_PREV)
+, FOREIGN KEY (SK_ID_CURR) REFERENCES prospects(SK_ID_CURR)
+);
+
+-- Create installments payments table
+CREATE TABLE sql_FI.payments (
+SK_ID_PREV int NOT NULL
+, SK_ID_CURR int NOT NULL
+, NUM_INSTALMENT_VERSION double
+, NUM_INSTALMENT_NUMBER int
+, DAYS_INSTALMENT double 
+, DAYS_ENTRY_PAYMENT double
+, AMT_INSTALMENT double
+, AMT_PAYMENT double
+, FOREIGN KEY (SK_ID_PREV) REFERENCES prev_app(SK_ID_PREV)
+, FOREIGN KEY (SK_ID_CURR) REFERENCES prospects(SK_ID_CURR)
+);
+
+-- create point-of-sale cash balance table
+CREATE TABLE sql_FI.pos_cash_bal (
+SK_ID_PREV int NOT NULL 
+, SK_ID_CURR int NOT NULL
+, MONTHS_BALANCE int
+, CNT_INSTALMENT double
+, CNT_INSTALMENT_FUTURE double
+, NAME_CONTRACT_STATUS text
+, SK_DPD int
+, SK_DPD_DEF int
+, FOREIGN KEY (SK_ID_PREV) REFERENCES prev_app(SK_ID_PREV)
+, FOREIGN KEY (SK_ID_CURR) REFERENCES prospects(SK_ID_CURR)
+);
+
+-- allow local infile
+SET GLOBAL local_infile=true;
+
+-- load prospects data 
+LOAD DATA LOCAL INFILE '/Users/Stephanie/Dropbox/Courses/MSAAI/1._Data_Science_Portfolio_Project/Mortgage_Default_Risk/data/default_risk.csv' 
+INTO TABLE sql_FI.prospects
+FIELDS TERMINATED BY ','
+IGNORE 1 LINES;
+
+-- load bureau data
+LOAD DATA LOCAL INFILE '/Users/Stephanie/Dropbox/Courses/MSAAI/1._Data_Science_Portfolio_Project/Mortgage_Default_Risk/data/bureau.csv' 
+INTO TABLE sql_FI.bureau
+FIELDS TERMINATED BY ','
+IGNORE 1 LINES;
+
+-- load prev_app data
+LOAD DATA LOCAL INFILE '/Users/Stephanie/Dropbox/Courses/MSAAI/1._Data_Science_Portfolio_Project/Mortgage_Default_Risk/data/previous_application.csv' 
+INTO TABLE sql_FI.prev_app
+FIELDS TERMINATED BY ','
+IGNORE 1 LINES;
+
+-- increase buffer pool size to account for file size
+SET GLOBAL innodb_buffer_pool_size = 2147483648;
+
+-- load bureau_balance data
+LOAD DATA LOCAL INFILE '/Users/Stephanie/Dropbox/Courses/MSAAI/1._Data_Science_Portfolio_Project/Mortgage_Default_Risk/data/bureau_balance.csv' 
+INTO TABLE sql_FI.bureau_balance
+FIELDS TERMINATED BY ','
+IGNORE 1 LINES;
+
+-- load cc balance data
+LOAD DATA LOCAL INFILE '/Users/Stephanie/Dropbox/Courses/MSAAI/1._Data_Science_Portfolio_Project/Mortgage_Default_Risk/data/credit_card_balance.csv' 
+INTO TABLE sql_FI.cc_balance
+FIELDS TERMINATED BY ','
+IGNORE 1 LINES;
+
+-- load installments payments data
+LOAD DATA LOCAL INFILE '/Users/Stephanie/Dropbox/Courses/MSAAI/1._Data_Science_Portfolio_Project/Mortgage_Default_Risk/data/installments_payments.csv' 
+INTO TABLE sql_FI.payments
+FIELDS TERMINATED BY ','
+IGNORE 1 LINES;
+
+-- load POS CASH balance data
+LOAD DATA LOCAL INFILE '/Users/Stephanie/Dropbox/Courses/MSAAI/1._Data_Science_Portfolio_Project/Mortgage_Default_Risk/data/POS_CASH_balance.csv' 
+INTO TABLE sql_FI.pos_cash_bal
+FIELDS TERMINATED BY ','
+IGNORE 1 LINES;
