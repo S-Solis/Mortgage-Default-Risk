@@ -1,3 +1,9 @@
+-- allow local infile
+SET GLOBAL local_infile=true;
+
+-- increase buffer pool size to account for file size
+SET GLOBAL innodb_buffer_pool_size = 2147483648;
+
 -- create prospects table
 CREATE TABLE sql_FI.prospects (
 	SK_ID_CURR int NOT NULL PRIMARY KEY
@@ -252,8 +258,6 @@ SK_ID_PREV int NOT NULL
 , FOREIGN KEY (SK_ID_CURR) REFERENCES prospects(SK_ID_CURR)
 );
 
--- allow local infile
-SET GLOBAL local_infile=true;
 
 -- load prospects data 
 LOAD DATA LOCAL INFILE 'data/default_risk.csv' 
@@ -272,9 +276,6 @@ LOAD DATA LOCAL INFILE 'data/previous_application.csv'
 INTO TABLE sql_FI.prev_app
 FIELDS TERMINATED BY ','
 IGNORE 1 LINES;
-
--- increase buffer pool size to account for file size
-SET GLOBAL innodb_buffer_pool_size = 2147483648;
 
 -- load bureau_balance data
 LOAD DATA LOCAL INFILE 'data/bureau_balance.csv' 
