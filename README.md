@@ -72,6 +72,8 @@ All trees ran with about 92% accuracy, with little variation between all of them
 
 I would still be wary of using this algorithm to flag possible default risk/lending decisions. As seen in the variables selected, there is a chance that the algorithms are all perpetuating age or gender bias that's present in the data. Given the four confusion matrices, I would recommend utilizing the true top 10 single tree. However, I want to stress that this data should not be used to make lending decisions without a human underwriter confirming the findings. 
 
+Using the top 10 single tree, the results are saved in results/default_risk_results.csv. This file contains the unique ID's for all prospects that are flagged as a default risk.
+
 
 *Note that due to the randomness of the random forest, many of the models' results can vary per run of the notebook. This variability can impact the models' calculated accuracies, areas under the curve (AUC's), type I/II error counts, and even the final top ten features selected by the random forest.
 
